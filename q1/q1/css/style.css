@@ -1,2 +1,97 @@
 @charset "UTF-8";
 /* 回答はここから */
+.q1-whitebox {
+  width: 200px;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.q1-centerbox {
+  text-align: center;
+}
+
+.q1-text {
+  font-size: 16px;
+  padding: 10px;
+  background: #a4b3e9;
+  display: inline-block;
+}
+
+/*ｐはもともとブロック要素であるため、
+inline-blockを使わないと横幅いっぱいまで暗めの水色が広がってしまう*/
+
+.q1-whitebox2 {
+  width: 200px;
+  padding: 20px 0;
+  background: #fff;
+  display: inline-block;
+}
+
+.q1-text2 {
+  width: 90px;
+  font-size: 16px;
+  padding: 10px;
+  background: #a4b3e9;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*inline-blockの位置がtext2だとうまくいかない。
+marginのoutoはwidthの設定が必須が関係？*/
+
+.q1-table {
+  display: table;
+}
+
+.table-box {
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.q1-2text {
+  font-size: 16px;
+  padding: 10px;
+  background: #fff;
+  display: inline-block;
+}
+
+/*displey-table利用するとカラム落ちしない段組みができる。
+table-cellで要素間に隙間を入れたいときはmarginはNG*/
+
+.q1-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-text {
+  font-size: 16px;
+  padding: 10px;
+  background: #fff;
+  display: inline-block;
+}
+
+/*flex→ブロック　inline-flex→インライン
+justify-content：flex-boxの中で主軸(横方向)の揃え方を指定。
+align-items：glex-boxの中で交差軸(縦方向)の揃え方を指定。*/
+
+.container {
+  position: relative;
+}
+
+.position-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 10px;
+  background: #a4b3e9;
+  display: inline-block;
+}
+
+/*transform:translate(x,y)
+X軸、Y軸方向の設定。
+topとleftで要素の位置を移動
+→transformでpのtextの大きさの-50%分移動*/
