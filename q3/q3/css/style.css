@@ -1,1 +1,43 @@
 @charset "UTF-8";
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*table-layoutでfixedにすると、全体に対して、セルの列分均等に分割になる。autoは内容によって変化する。
+border-collapse: spacingの際はborder-spacingの値が反映される。*/
+
+th,td {
+  padding: 10px;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+/*thのレイアウトの初期値は中央、tdは左寄り*/
+
+th {
+  line-height: 26px;
+  background: #319c4a;
+  font-size: 18px;
+}
+
+td {
+  line-height: 22px;
+}
+
+tr:nth-child(odd) {
+  background: #bcbcbc;
+}
+
+tr:nth-child(even) {
+  background: #d5ffc7;
+}
+
+tr:last-child {
+  border-top: 1px double rgb(255, 255, 255);
+}
+
+/*oddは奇数、evenは偶数。*/

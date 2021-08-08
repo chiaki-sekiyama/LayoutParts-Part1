@@ -1,1 +1,153 @@
 @charset "UTF-8";
+
+.item {
+  background: #00bbdd;
+  color: #fff;
+  width: 65px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*row→初期値子要素を左から右に配置、row-reverse→右から左
+column→上から下、column-reverse→下から上*/
+
+.container2-1 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container2-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container2-3 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+/*flex-wrap、子要素が親要素の幅を超えてしまった際に折り返して複数行にする。
+nowrap→初期値子要素を折り返しせず一行に並べる
+wrap→折り返して複数行に上から下へ
+wrap-reverse→折り返して複数行に下から上へ*/
+
+.container3-1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container3-2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container3-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.container3-4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container3-5 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*justify-content、水平方向の揃え方
+flex-start→初期値、行の開始位置から左揃え
+flex-end→行末から、右揃え
+center→中央揃え
+space-between→最初と最後の子要素を両端に配置、残りの子要素を均等に配置
+space-around→すべての子要素を均等に配置*/
+
+.item-g {
+  background: #00bbdd;
+  color: #fff;
+  padding: 10px;
+}
+
+.container4-1 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 10px
+  ;
+}
+
+.container4-2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.container4-3 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px
+  ;
+  gap: 10px;
+}
+
+.container4-4 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  gap: 10px;
+}
+
+.red-box {
+  background: #dd0700;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.green-box {
+  background: #0bdd00;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.yellow-box {
+  background: #d9dd00;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/*参考サイトURL
+https://web-design-textbook.com/css-middle.html
+https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+意味grid:格子、地図などに使用される正しい角度で交差する線etc...
+枠に区切って配置を指定できる。地図上の経度緯度を利用するイメージ。
+一度理解すればかなり利用しやすいCSS
+flexとの使い分けをどう判断するか、という内容のWebサイトが複数あったため
+個人的に重点を置いて勉強したい項目になりそう*/

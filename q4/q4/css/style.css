@@ -1,1 +1,58 @@
 @charset "UTF-8";
+
+.main--area {
+  text-align: center;
+}
+
+/*displey: tableを親要素に、table-cellを子要素に
+要素を横並びにするときによく利用する
+カラム落ちしない
+改行が必要なときはあまり好ましくない*/
+
+.cell {
+  padding: 20px;
+  display: table-cell;
+}
+
+.wrap1 {
+  display: table;
+  width: 100%;
+}
+
+.red-box {
+  background: #ff7b7b;
+  width: 300px;
+}
+
+.blue-box {
+  background: #7b86ff;
+}
+
+.yellow-box {
+  background: #fff27b;
+  width: 300px;
+}
+
+.wrap2 {
+  display: table;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.green-box {
+  background: #7bff91;
+}
+
+.pink-box {
+  background: #ff7be2;
+  width: 400px;
+}
+
+.orange-box {
+  background: #ffc67b;
+  width: 400px;
+}
+
+.lightblue-box {
+  background: #7bf2ff;
+}
