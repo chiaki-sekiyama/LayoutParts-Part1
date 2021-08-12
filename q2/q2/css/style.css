@@ -1,9 +1,31 @@
 @charset "UTF-8";
 /* 回答はここから */
+
+.list-area {
+  border: 0.1px solid transparent;
+}
+
+/*ulの上下にmarginをつけたことで見出しのmarginとの相殺が起こってしまうので、
+borderを透明にして配置し相殺が起きないようにしています。
+僅かですが0.1px分リストの位置が下がってしまっています。*/
+
 ul {
   display: flex;
   justify-content: center;
+  margin: 0 30px 60px 30px;
 }
+
+ul:first-child {
+  margin-top: 30px;
+}
+
+ul:last-child {
+  margin-bottom: 0;
+}
+
+/*上下30pxで一括設定すると相殺で30pxしか反映されないので、上部のみfirst-childで設定。
+下部は60pxでとって最後の要素だけlast-childで打消し。
+ディスプレイを縮めた際に左右余白あけるためにulの左右で30pxを設定。*/
 
 li {
   list-style: none;
@@ -12,9 +34,15 @@ li {
   border-radius: 13px;
   background: #d2b48c;
   width: 200px;
-  margin: 30px;
+  margin-right: 60px;
   padding: 10px;
 }
+
+li:last-child {
+  margin-right: 0;
+}
+
+/*右側のみmarginをとり、最後の要素で打消し、余分な部分をなくす。*/
 
 /*flexboxを利用することで親要素内の子要素の高さを統一することが可能。
 liでstyle指定しないと・がつく。*/
