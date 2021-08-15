@@ -123,24 +123,19 @@ space-around→すべての子要素を均等に配置*/
 
 .red-box {
   background: #dd0700;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column: 1 / 3;
 }
 
 .green-box {
   background: #0bdd00;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
 }
 
 .yellow-box {
   background: #d9dd00;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
 }
 
 /*参考サイトURL

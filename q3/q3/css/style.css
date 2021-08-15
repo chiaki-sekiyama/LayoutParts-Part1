@@ -7,15 +7,14 @@ table {
   border-spacing: 0;
 }
 
-/*table-layoutでfixedにすると、全体に対して、セルの列分均等に分割になる。autoは内容によって変化する。
-border-collapse: spacingの際はborder-spacingの値が反映される。*/
-
-th,td {
+th, td {
   padding: 10px;
   border: 1px solid #000000;
   text-align: center;
 }
 
+/*thead,tbodyを追加したことで何故かtable上側のborderが見えなくなってしまった。
+個別でborderを指定しても改善せず。背景黒指定や、コードの記載位置を変えても変化なし。*/
 /*thのレイアウトの初期値は中央、tdは左寄り*/
 
 th {
@@ -29,12 +28,17 @@ td {
 }
 
 tr:nth-child(odd) {
-  background: #bcbcbc;
+  background: #d5ffc7;
 }
 
 tr:nth-child(even) {
-  background: #d5ffc7;
+  background: #bcbcbc;
 }
+
+/*tr:first-child {
+  border-top: 1px solid #000000;
+}
+メモ：個別の指定も効果なし*/
 
 tr:last-child {
   border-top: 1px double rgb(255, 255, 255);
